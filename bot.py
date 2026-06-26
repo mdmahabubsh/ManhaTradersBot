@@ -71,12 +71,16 @@ async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 # Bot চালু
-app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
+def main():
+    app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
 
-app.add_handler(CommandHandler("start", start))
-app.add_handler(CommandHandler("products", products))
-app.add_handler(CommandHandler("contact", contact))
-app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, chat))
+    app.add_handler(CommandHandler("start", start))
+    app.add_handler(CommandHandler("products", products))
+    app.add_handler(CommandHandler("contact", contact))
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, chat))
 
-print("Bot started...")
-app.run_polling()
+    print("Bot started...")
+    app.run_polling()
+
+if __name__ == "__main__":
+    main()

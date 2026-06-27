@@ -53,6 +53,7 @@ async def contact(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 # সাধারণ চ্যাট
+# সাধারণ চ্যাট
 async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_message = update.message.text
 
@@ -64,8 +65,8 @@ async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     "role": "system",
                     "content": (
                         "তুমি মানহা ট্রেডার্সের একজন কাস্টমার সাপোর্ট প্রতিনিধি। "
-                        "তুমি মানুষের মতো বাংলা ভাষায় উত্তর দেবে। "
-                        "মানহা ট্রেডার্স চাল, সরিষার তেল এবং খাদ্যপণ্য বিক্রি করে।"
+                        "তুমি বাংলা ভাষায় উত্তর দেবে। "
+                        "মানহা ট্রেডার্স চাল, সরিষার তেল ও খাদ্যপণ্য বিক্রি করে।"
                     ),
                 },
                 {
